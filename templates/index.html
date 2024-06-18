@@ -2,13 +2,16 @@
 
 {% include '_header.html' %}
 
-<div class="section-date">
-  JUN 30
-  <br>
-  Sunday Noon
+<div class="section section-date">
+  <div class="block-date">
+    Sunday, June 30, 2024
+  </div>
+  <div class="block-time">
+    12 NOON
+  </div>
 </div>
 
-<ul class="section-locations">
+<ul class="section section-locations">
 
   {% for region in config.regions %}
     <li class="block-region">
