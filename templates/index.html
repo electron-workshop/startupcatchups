@@ -1,5 +1,28 @@
-{% set title = "Startup Catchups!" %}
+{% import 'config.jinja' as config %}
 
 {% include '_header.html' %}
+
+<div class="section-date">
+  JUN 30
+  <br>
+  Sunday Noon
+</div>
+
+<ul class="section-locations">
+
+  {% for region in config.regions %}
+    <li class="block-region">
+      {{ region.title }}
+      <ul>
+	{% set subset = config.nodes | selectattr('region', 'eq', region.name) %}
+	{% for node in subset %}
+	  <li class="block-node">{{ node.title }}</li>
+	{% endfor %}
+
+      </ul>
+    </li>
+  {% endfor %}
+
+</div>
 
 {% include '_footer.html' %}
