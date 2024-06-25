@@ -10,16 +10,19 @@
     12 NOON
   </div>
 </div>
+<a href="https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20240630T020000Z%2F20240630T040000Z&text=Startup%20Catchups" title="Save Event to Calendar">Add to Calendar</a>
 
 <ul class="section section-locations">
-
   {% for region in config.regions %}
     <li class="block-region">
-      {{ region.title }}
+      <h2>{{ region.title }}</h2>
       <ul>
 	{% set subset = config.nodes | selectattr('region', 'eq', region.name) %}
 	{% for node in subset %}
-	  <li class="block-node">{{ node.title }}</li>
+	  <li class="block-node">
+      <h4>{{ node.title }}</h4>
+      <p>{{ node.location }}</p>
+    </li>
 	{% endfor %}
 
       </ul>

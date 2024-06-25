@@ -1,9 +1,21 @@
 body {
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 .container {
   margin: 10px;
+  text-align: center;
+  width: -webkit-fill-available;
+  max-width: 768px;
+}
+
+h1 {
+  font-size: xxx-large;
+  margin-bottom: 20px;
 }
 
 ul {
@@ -17,19 +29,41 @@ ul li {
 }
 
 li.block-region {
-  margin-top: 20px;
+  width: 50%;
+  padding: 0px 10px;
 }
 
 li.block-node {
   border: 1px solid black;
-  border-radius: 10px;
   padding: 10px;
-  margin: 5px 0;
+  margin: 20px 0;
+  box-shadow: 1px 1px 1px black;
 }
 
-.section {
+.section-image {
+  margin-bottom: 50px;
+}
+
+.section-date {
   border: 1px solid black;
-  border-radius: 5px;
   padding: 10px;
   margin: 10px;
+  box-shadow: 1px 1px 1px black;
+}
+
+.section-date div {
+  font-size: 1.5em;
+  padding: 5px 0px;
+}
+
+.section-locations {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.section-locations h4,
+.section-locations p {
+  margin: 5px 0px;
 }
